@@ -1,0 +1,3 @@
+add = () => {
+  console.log("hi");
+}

@@ -1,0 +1,12 @@
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
