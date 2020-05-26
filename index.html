@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
   <link rel="stylesheet" type="text/css" href="style.css">
   <title>My Anime Ratings</title>
 </head>
@@ -11,25 +11,21 @@
 <body>
   <div id="root"></div>
   <script src="scripts.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   <div class="container">
     <h2>My Anime Ratings</h2>
 
-    <form>
-      <label>Name: </label><br>
-      <input type=" text" id="nameInput"><br><br>
+    <label>Name: </label><br>
+    <input type=" text" id="nameInput"><br><br>
 
-      <label>Rating: </label><br>
-      <input type="text" id="ratingInpupt"><br><br>
+    <label>Rating: </label><br>
+    <input type="text" id="ratingInpupt"><br><br>
 
-      <input type="submit" value="Submit" onclick="add()">
-    </form><br>
+    <button onclick="getList()">Get Anime List</button>
+    <button onclick="add()">Add Rating</button>
 
-    <ul>
-      <li>anime1 8.5</li>
-      <hr class="dashed">
-      <li>anime2 9.0</li>
-      <hr class="dashed">
+    <ul id="animeList">
     </ul>
 
 
