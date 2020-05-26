@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,10 +20,12 @@ public class AnimeController {
 	@Autowired
 	private AnimeService animeService;
 
-	@RequestMapping("/create")
+	@PostMapping("/create")
 	public String createAnime(@RequestParam String name, @RequestParam float rating) {
 		Anime a = animeService.createAnime(name, rating);
 		return a.toString();
+		// use @RequestParam if we want to pass params in the endpoint
+		// use @RequestBody if we want to pass a json as body
 	}
 
 	@RequestMapping("/getAll")
