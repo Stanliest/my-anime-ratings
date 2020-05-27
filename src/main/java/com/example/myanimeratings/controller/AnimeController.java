@@ -4,8 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,24 +39,22 @@ public class AnimeController {
 		return animeService.getByRating(rating);
 	}
 	
-	@RequestMapping("/updateAnime")
+	@PutMapping("/updateAnime")
 	public String updateAnime(@RequestParam String name, @RequestParam float rating) {
 		Anime a = animeService.update(name, rating);
 		return a.toString();
 	}	
 	
-	@RequestMapping("/deleteAnime")
+	@DeleteMapping("/deleteAnime")
 	public String deleteAnime(@RequestParam String name) {
 		animeService.deleteByName(name);
 		return "Deleted " + name;
 	}
 	
-	@RequestMapping("/deleteAll")
+	@DeleteMapping("/deleteAll")
 	public String deleteAll() {
 		animeService.deleteAll();
 		return "Deleted all anime ratings";
 	}
-	
-	
 	
 }

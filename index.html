@@ -12,23 +12,24 @@
   <div id="root"></div>
   <script src="scripts.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 
   <div class="container">
-    <h2>My Anime Ratings</h2>
+    <div class="subcontainer">
+      <h2>My Anime Ratings</h2>
 
-    <label>Name: </label><br>
-    <input type=" text" id="nameInput"><br><br>
+      <label>Name: </label><br>
+      <input type=" text" id="nameInput"><br><br>
 
-    <label>Rating: </label><br>
-    <input type="text" id="ratingInput"><br><br>
+      <label>Rating: </label><br>
+      <input type="text" id="ratingInput"><br><br>
 
-    <button onclick="getList()">Get Rating List</button>
-    <button onclick="add()">Add Rating</button>
+      <button onclick="getList()">Get Rating List</button>
+      <button onclick="add()">Add Rating</button>
 
-    <ul id="animeList">
-    </ul>
+      <ul id="animeList"></ul>
 
-
+    </div>
   </div>
 
 </body>

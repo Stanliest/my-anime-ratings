@@ -1,4 +1,15 @@
-async function removeAllChildNodes(parent) {
+function addCloseButton(parent) {
+  while (parent.firstChild) {
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+    parent.firstChild.appendChild(span);
+  }
+  console.log("added all close buttons")
+}
+
+function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
@@ -13,10 +24,18 @@ async function getList() {
     .then((data) => {
       console.log("/getAll", data);
       for (anime of data) {
+        // close button
+        var span = document.createElement("span");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+
         let li = document.createElement("li");
         let t = document.createTextNode(anime.name + ": " + anime.rating);
         li.appendChild(t);
-        document.getElementById("animeList").appendChild(li);
+
+        document.getElementById("animeList").appendChild(li).appendChild(span);
+
       }
     }).catch(error => { console.log(error); });
 }

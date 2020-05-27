@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.example.myanimeratings.anime.Anime;
 import com.example.myanimeratings.repository.AnimeRepository;
 
+// these methods can also be written in the controller class.
 @Service
 public class AnimeService {
 

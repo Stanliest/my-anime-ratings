@@ -1,12 +1,54 @@
+h2 {
+  font-family: Gloria Hallelujah;
+}
+
 .container {
-  max-width: 500px;
+  background-color: lightcyan;
+  max-width: 400px;
   margin: auto;
 }
 
-ul {
-  list-style-type: none;
+.subcontainer {
+  padding: 30px;
 }
 
-hr.dashed {
-  border-top: 3px dashed #bbb;
+ul {
+  padding: 20px;
+  list-style-type: square;
+}
+
+li {
+  margin: 15px;
+}
+
+.close:hover {
+  cursor: pointer;
+  background-color: red;
+}
+
+.close {
+  color: white;
+  background-color: lightskyblue;
+  margin: 20px;
+  padding: 2px 6px;
+}
+
+button {
+  font-size: 12px;
+  color: white;
+  background-color: lightskyblue;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: green;
+}
+
+
+input {
+  margin-top: 8px;
 }
