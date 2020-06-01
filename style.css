@@ -1,8 +1,10 @@
 h2 {
   font-family: Gloria Hallelujah;
+  padding-bottom: 30px;
 }
 
 .container {
+  border-style: ridge;
   background-color: lightcyan;
   max-width: 400px;
   margin: auto;
@@ -23,20 +25,20 @@ li {
 
 .close:hover {
   cursor: pointer;
-  background-color: red;
+  color: red;
 }
 
 .close {
-  color: white;
-  background-color: lightskyblue;
+  color: skyblue;
+  background-color: white;
   margin: 20px;
   padding: 2px 6px;
 }
 
 button {
   font-size: 12px;
-  color: white;
-  background-color: lightskyblue;
+  color: black;
+  background-color: white;
   cursor: pointer;
   padding: 5px;
   margin-top: 5px;
@@ -45,7 +47,7 @@ button {
 }
 
 button:hover {
-  background-color: green;
+  background-color: lightgreen;
 }
 
 

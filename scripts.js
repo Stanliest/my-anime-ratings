@@ -1,10 +1,12 @@
-function addCloseButton(parent) {
-  while (parent.firstChild) {
+function addCloseButton(list) {
+  console.log(list);
+  var i;
+  for (i = 0; i < list.length; i++) {
     var span = document.createElement("SPAN");
     var txt = document.createTextNode("\u00D7");
     span.className = "close";
     span.appendChild(txt);
-    parent.firstChild.appendChild(span);
+    list[i].appendChild(span);
   }
   console.log("added all close buttons")
 }
@@ -23,20 +25,17 @@ async function getList() {
     .then(response => response.json())
     .then((data) => {
       console.log("/getAll", data);
+
       for (anime of data) {
-        // close button
-        var span = document.createElement("span");
-        var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
 
         let li = document.createElement("li");
         let t = document.createTextNode(anime.name + ": " + anime.rating);
         li.appendChild(t);
-
-        document.getElementById("animeList").appendChild(li).appendChild(span);
-
+        parent.appendChild(li);
       }
+
+      this.addCloseButton(parent.getElementsByTagName("li"));
+
     }).catch(error => { console.log(error); });
 }
 
