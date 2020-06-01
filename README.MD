@@ -1,6 +1,6 @@
 Here's another 'todolist' application where I learn about the Java framework Spring Boot. All things are on local.
 
-![](1.gif)\
+![](1.gif)
 
 ## Backend: Spring, Mongodb
 
