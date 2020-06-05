@@ -11,10 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Cors filter allowing cross-domain requests
- * Needed for Heroku deployment
- *
- * @author valeryyakovlev
+ * https://medium.com/@valeryyakovlev/how-to-disable-cors-restrictions-in-spring-boot-app-819158aa3919
+ * Disabing CORS restriction
  */
 @Component
 public class CorsFilter implements Filter {
